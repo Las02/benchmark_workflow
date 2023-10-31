@@ -85,12 +85,12 @@ rule all:
         abundance=os.path.join(OUTDIR,"abundance.npz") 
 
 
-
 include: "rules/1_filter_rename_cat.smk"        # Remove each contig with length<2000 | rename them to {Sample}C{ID} | cat all contigs -> file with all contigs together
 include: "rules/2_index_and_run_minimap2.smk"   # Map the reads to the contigs using minimap2 to produce bam files -> bam file for each sample? eg. both fw/rw reads
 include: 'rules/3_sort_bam.smk'                 # Sort the bam files -> a bam file for each sample
 include: 'rules/4_calculate_abundance.smk'      # Calculate the abundance for each bam file -> abundance for each bam file
 include: 'rules/5_merge_abundance.smk'          # Merge the abundances -> npz file with abundances
+include: 'rules/6_vamb.smk'                     # Takes the abundance npz file and the contigs and runs bam -> bins
 
 # Input avamb:
 #contigs=os.path.join(OUTDIR,"contigs.flt.fna.gz"),

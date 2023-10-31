@@ -13,8 +13,9 @@ rule get_headers:
         mem = "4GB"
     threads:
         1
-    conda:
-        "envs/samtools.yaml"
+    envmodules:
+        config['moduleenvs']['samtools']
+  
     log:
         head = os.path.join(OUTDIR,"log/abundance/headers.log"),
         o = os.path.join(OUTDIR,"log/abundance/get_headers.o"),

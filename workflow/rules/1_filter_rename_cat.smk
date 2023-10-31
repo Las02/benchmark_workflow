@@ -16,7 +16,6 @@ rule cat_contigs:
     log:
         o = os.path.join(OUTDIR,"log/contigs/catcontigs.o"),
         e = os.path.join(OUTDIR,"log/contigs/catcontigs.e")
-    
     conda:
         VAMBCONDAENV
     shell: "python {params.path} {output} {input} -m {MIN_CONTIG_SIZE}"

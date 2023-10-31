@@ -1,0 +1,28 @@
+==> 2023-10-31 16:10:28 <==
+# cmd: /home/las/miniforge3/condabin/mamba create --quiet --file /mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/.snakemake/conda/8d778e3b7de1247d097545733ac57dde_.yaml --prefix /mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/.snakemake/conda/8d778e3b7de1247d097545733ac57dde_
+# conda version: 23.3.1
++bioconda/linux-64::c-ares-1.11.0-h470a237_1
++bioconda/linux-64::htslib-1.9-ha228f0b_7
++bioconda/linux-64::libdeflate-1.0-h14c3975_1
++bioconda/linux-64::samtools-1.9-h10a08f8_12
++conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge
++conda-forge/linux-64::_openmp_mutex-4.5-2_gnu
++conda-forge/linux-64::bzip2-1.0.8-h7f98852_4
++conda-forge/linux-64::ca-certificates-2023.7.22-hbcca054_0
++conda-forge/linux-64::curl-7.71.1-he644dc0_8
++conda-forge/linux-64::krb5-1.17.2-h926e7f8_0
++conda-forge/linux-64::libcurl-7.71.1-hcdd3856_8
++conda-forge/linux-64::libedit-3.1.20191231-h46ee950_2
++conda-forge/linux-64::libev-4.33-h516909a_1
++conda-forge/linux-64::libgcc-ng-13.2.0-h807b86a_2
++conda-forge/linux-64::libgomp-13.2.0-h807b86a_2
++conda-forge/linux-64::libnghttp2-1.41.0-hab1572f_1
++conda-forge/linux-64::libssh2-1.10.0-haa6b8db_3
++conda-forge/linux-64::libstdcxx-ng-13.2.0-h7e041cc_2
++conda-forge/linux-64::libzlib-1.2.13-hd590300_5
++conda-forge/linux-64::ncurses-6.1-hf484d3e_1002
++conda-forge/linux-64::openssl-1.1.1w-hd590300_0
++conda-forge/linux-64::tk-8.6.13-h2797004_0
++conda-forge/linux-64::xz-5.2.6-h166bdaf_0
++conda-forge/linux-64::zlib-1.2.13-hd590300_5
+# update specs: ['samtools']

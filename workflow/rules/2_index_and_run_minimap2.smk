@@ -18,9 +18,10 @@ rule index:
         o = os.path.join(OUTDIR,"log/contigs/index.o"),
         e = os.path.join(OUTDIR,"log/contigs/index.e")
  
-
-    conda: 
-        "envs/minimap2.yaml"
+    envmodules:
+        config['moduleenvs']['minimap2']
+    #conda: 
+    #    "envs/minimap2.yaml"
     shell:
         "minimap2 -I {INDEX_SIZE} -d {output} {input} 2> {log.out_ind}"
 
@@ -47,9 +48,10 @@ rule dict:
         out_dict= os.path.join(OUTDIR,"log/contigs/dict.log"),
         o = os.path.join(OUTDIR,"log/contigs/dict.o"),
         e = os.path.join(OUTDIR,"log/contigs/dict.e")
-
-    conda:
-        "envs/samtools.yaml"
+    envmodules:
+        config['moduleenvs']['samtools']
+    #conda:
+    #    "envs/samtools.yaml"
     shell:
         "samtools dict {input} | cut -f1-3 > {output} 2> {log.out_dict}"
 
@@ -73,9 +75,9 @@ rule minimap:
         out_minimap = os.path.join(config['outdir'],"log/map/{sample}.minimap.log"),
         o = os.path.join(config['outdir'],"log/map/{sample}.minimap.o"),
         e = os.path.join(config['outdir'],"log/map/{sample}.minimap.e")
+    envmodules:
+        config['moduleenvs']['minimap2']
 
-    conda:
-        "envs/minimap2.yaml"
     shell:
         # See comment over rule "dict" to understand what happens here
         "minimap2 -t {threads} -ax sr {input.mmi} {input.fq} -N 5"

@@ -1,0 +1,14 @@
+prefix=/mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/.snakemake/conda/8d778e3b7de1247d097545733ac57dde_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+KDB5_DB_LIB=
+
+Name: kdb
+Description: Kerberos database access libraries
+Version: 1.17.2
+Requires.private: mit-krb5-gssapi mit-krb5 gssrpc
+Cflags: -I${includedir}
+Libs: -L${libdir} -lkdb5
+Libs.private: ${KDB5_DB_LIB}

@@ -1,0 +1,7 @@
+Building DAG of jobs...
+Creating conda environment envs/samtools.yaml...
+Downloading and installing remote packages.
+Environment for /mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/envs/samtools.yaml created (location: .snakemake/conda/8d778e3b7de1247d097545733ac57dde_)
+WorkflowError:
+Failed to open source file /mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/rules/envs/minimap2.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/rules/envs/minimap2.yaml'

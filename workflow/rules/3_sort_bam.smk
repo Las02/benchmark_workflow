@@ -17,8 +17,9 @@ rule sort:
         out_sort = os.path.join(OUTDIR,"log/map/{sample}.sort.log"),
         o = os.path.join(OUTDIR,"log/map/{sample}.sort.o"),
         e = os.path.join(OUTDIR,"log/map/{sample}.sort.e")
-       
-    conda:
-        "envs/samtools.yaml"
+    envmodules:
+        config['moduleenvs']['samtools']
+    #conda:
+    #    '/mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/envs/samtools.yaml'
     shell:
         "samtools sort {input} -T {params.prefix} --threads 1 -m 3G -o {output} 2> {log.out_sort}"

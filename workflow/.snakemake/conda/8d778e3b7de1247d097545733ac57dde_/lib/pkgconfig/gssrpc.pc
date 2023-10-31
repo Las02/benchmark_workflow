@@ -1,0 +1,12 @@
+prefix=/mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/.snakemake/conda/8d778e3b7de1247d097545733ac57dde_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+vendor=MIT
+
+Name: gssrpc
+Description: GSSAPI RPC implementation
+Version: 1.17.2
+Cflags: -I${includedir}
+Libs: -L${libdir} -lgssrpc
+Requires.private: mit-krb5-gssapi
