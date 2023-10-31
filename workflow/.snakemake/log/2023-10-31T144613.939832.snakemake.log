@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                  count
+-----------------  -------
+abundance_mask           1
+all                      1
+bam_abundance            2
+cat_contigs              1
+create_abundances        1
+dict                     1
+get_headers              1
+index                    1
+minimap                  2
+sort                     2
+total                   13
+
+Select jobs to execute...
+
+[Tue Oct 31 14:46:14 2023]
+rule cat_contigs:
+    input: /mnt/c/Users/Admin/Desktop/data/4.contigs.fasta.gz, /mnt/c/Users/Admin/Desktop/data/7.contigs.fasta.gz
+    output: outdir_avamb/contigs.flt.fna.gz
+    log: outdir_avamb/log/contigs/catcontigs.o, outdir_avamb/log/contigs/catcontigs.e
+    jobid: 1
+    reason: Missing output files: outdir_avamb/contigs.flt.fna.gz
+    resources: tmpdir=/tmp, mem=5GB, mem_mb=5000
+
+[Tue Oct 31 14:46:14 2023]
+Error in rule cat_contigs:
+    jobid: 1
+    input: /mnt/c/Users/Admin/Desktop/data/4.contigs.fasta.gz, /mnt/c/Users/Admin/Desktop/data/7.contigs.fasta.gz
+    output: outdir_avamb/contigs.flt.fna.gz
+    log: outdir_avamb/log/contigs/catcontigs.o, outdir_avamb/log/contigs/catcontigs.e (check log file(s) for error details)
+    conda-env: /home/las/micromamba/envs/vamb
+    shell:
+        python /mnt/c/Users/Admin/Desktop/benchmark_workflow/src/concatenate.py outdir_avamb/contigs.flt.fna.gz /mnt/c/Users/Admin/Desktop/data/4.contigs.fasta.gz /mnt/c/Users/Admin/Desktop/data/7.contigs.fasta.gz -m 2000
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-10-31T144613.939832.snakemake.log

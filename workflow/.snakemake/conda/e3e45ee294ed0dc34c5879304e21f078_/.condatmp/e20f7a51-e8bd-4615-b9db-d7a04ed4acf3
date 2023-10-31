@@ -1,0 +1,9 @@
+prefix=/mnt/c/Users/Admin/Desktop/benchmark_workflow/workflow/.snakemake/conda/e3e45ee294ed0dc34c5879304e21f078_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL
+Description: Secure Sockets Layer and cryptography libraries and tools
+Version: 1.1.1w
+Requires: libssl libcrypto
