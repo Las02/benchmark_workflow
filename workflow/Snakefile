@@ -1,5 +1,7 @@
 configfile: '../config/config.yaml'
-VAMBCONDAENV = "/home/las/micromamba/envs/vamb"
+VAMBCONDAENV = 'vamb/4.1.3' # Change to static later
+SAMTOOLSENV = "samtools/1.17"
+MINIMAP2ENV = "minimap2/2.6"
 
 import re
 import os
@@ -79,10 +81,10 @@ for line in fh_in:
     contigs_list.append(line)
 
 # target rule
-rule all:
-    input:
-        contigs=os.path.join(OUTDIR,"contigs.flt.fna.gz"),
-        abundance=os.path.join(OUTDIR,"abundance.npz") 
+#rule all:
+#    input:
+#        contigs=os.path.join(OUTDIR,"contigs.flt.fna.gz"),
+#        abundance=os.path.join(OUTDIR,"abundance.npz") 
 
 
 include: "rules/1_filter_rename_cat.smk"        # Remove each contig with length<2000 | rename them to {Sample}C{ID} | cat all contigs -> file with all contigs together
