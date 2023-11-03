@@ -1,0 +1,2 @@
+/mnt/c/Users/Admin/Desktop/data/4.contigs.fasta.gz
+/mnt/c/Users/Admin/Desktop/data/7.contigs.fasta.gz
