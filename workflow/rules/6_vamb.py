@@ -19,14 +19,13 @@ rule run_avamb:
     resources:
         mem=AVAMB_MEM
     threads:
-        int(avamb_threads)
+        int(8)
     conda:
         VAMBCONDAENV
     log:
         vamb_out=os.path.join(OUTDIR,"tmp/avamb_finished.log"),
         o=os.path.join(OUTDIR,'log','run_avamb.out'),
         e=os.path.join(OUTDIR,'log','run_avamb.err')
-    default_target: True
     shell:
         """
         vamb --outdir {output.outdir_avamb} --fasta {input.contigs} -p {threads} --rpkm {input.abundance} -m {MIN_CONTIG_SIZE} --minfasta {MIN_BIN_SIZE}  {params.cuda}  {AVAMB_PARAMS}

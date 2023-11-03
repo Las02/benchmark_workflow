@@ -1,4 +1,5 @@
 # Filter contigs for 2000bp and rename them to conform with the multi-split workflow 
+#delme
 rule cat_contigs:
     input:
         contigs_list
